@@ -1,4 +1,4 @@
-.container {
+.site-name {
     width: 1500px;
     padding: 0 20px;
     margin-top: 75px;
@@ -10,7 +10,7 @@
     height: 150px;
     margin-bottom: 1px;
     padding-top: 30px;
-    background: no-repeat center url("header-img_1 NG.png");
+    background: no-repeat center url("C:\\Users\\User\\Desktop\\header-img_1 NG.png");
     background-size: cover;
     color: #ffffff;
 }
@@ -21,9 +21,99 @@
 }
 
 .nav-line div button {
-    width: 376px;
+    width: 373px;
     height: 75px;
     background-color: #c1c5ff;
     font-size: 20px;
     font-weight: 700;
+}
+
+nav {
+    margin-bottom: 50px;
+}
+
+body .body-h1 {
+    text-align: center;
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+}
+
+.main-intro, .main-conclusion p {
+    text-align: justify;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border:3px #c1c5ff solid;
+    border-radius: 1em; 
+    font-size: 25px;
+    font-family: 'Andale Mono', sans-serif;
+    line-height: 1.5;
+}
+
+.main-features {
+    width: 1100px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 75px;
+}
+  
+.main-features p {
+    display: inline-block;
+    vertical-align: top;
+    width: 30%;
+    margin: 0 5px;
+    background-repeat: no-repeat;
+    background-position: center top;
+    text-align: center;
+    font-size: 23px;
+    font-family: 'Comic Sans MS', 'Comic Sans';
+    font-weight: 700;
+}
+
+footer {
+    background-color: #c1c5ff;
+    height: 250px;
+    display: flex;
+}
+
+footer h1 {
+    font-size: 20px;
+    margin-right: 110px;
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.footer-links {
+    text-align: left;
+    margin-left: 25px;
+    flex: 1 1 0px;
+}
+
+.footer-links li {
+    font-size: 15px;
+    font-family: 'Andale Mono', sans-serif;
+    font-weight: 700;
+}
+
+.footer-contacts {
+    text-align: right;
+    margin-right: 25px;
+    flex: 1 1 0px;
+}
+
+.contacts-phone {
+    margin-right: 55px;
+}
+
+.contacts-github {
+    margin-right: 134px;
+}
+
+.contacts-phone, .contacts-email, .contacts-github,  a:link, a:visited {
+    color: #000;
+    text-decoration: none;
 }
