@@ -1,25 +1,339 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title> Неевклидова геометрия </title>
-        <link rel="stylesheet" href="Neevlc_geom.css">
+        <link rel="stylesheet" href="C:\Users\User\Desktop\Neevlc_geom.css">
+        <script>
+            function showContent(contentNumber) {
+                var otw = document.getElementById('onetime_welcome');
+                otw.classList.add('content');
+
+                var contents = document.querySelectorAll('.content');
+                
+                contents.forEach(function(content) {
+                    content.classList.remove('active');
+                });
+                
+                var contentToShow = document.getElementById('content' + contentNumber);
+                contentToShow.classList.add('active');
+		    }
+
+            function openLetter(letter_num) {
+                var i, tabs;
+                tabs = document.getElementsByClassName("letter");
+                for (i = 0; i < tabs.length; i++) {
+                    tabs[i].classList.remove("active");
+                }
+                document.getElementById(letter_num).classList.add("active");
+            }
+        </script>
     </head>
-    <header class="site-header">
-        <div class="container">
-            <h1>Неевклидова геометрия | Образовательный сайт</h1>
+    <body>
+        <header class="site-header">
+            <div class="site-name">
+                <h1 class="underline" onclick="showContent(6)"> Неевклидова геометрия | Образовательный сайт </h1>
+            </div>
+        </header>
+        <nav class="nav-line">
+            <div style="width: max-content">
+                <button class="underline" onclick="showContent(1)"> Теория </button>
+                <button class="underline" onclick="showContent(2)"> Галерея </button>
+                <button class="underline" onclick="showContent(3)"> Неевклидов калькулятор </button>
+                <button class="underline" onclick="showContent(4)"> Библиотека </button>
+                <button class="underline" onclick="showContent(5)"> Форум </button>
+            </div>
+        </nav>
+        <div id="onetime_welcome">
+            <h1 class="body-h1"> Что такое неевклидова геометрия? </h1>
+            <section class="main-intro">    
+                <p><b>Неевклидова геометрия</b> – это удивительная область математики, которая изучает геометрические пространства, 
+                отличные от привычной нам евклидовой геометрии. В отличие от евклидовой геометрии, неевклидова геометрия 
+                не придерживается аксиом Евклида и может иметь другую структуру пространства. 
+                Одним из самых известных примеров неевклидовой геометрии является геометрия Лобачевского, 
+                где выполняется гипотеза о параллельных прямых с различной кривизной. В этой геометрии существуют прямые, 
+                которые не пересекаются, а также углы, сумма которых может быть меньше или больше 180 градусов. 
+                Неевклидова геометрия находит свое применение не только в математике, но и в физике, космологии, 
+                компьютерной графике и других областях науки. Она помогает нам лучше понять разнообразие структур 
+                пространства и времени в нашей Вселенной.</p>
+            </section>
+            <h1 class="body-h1"> Вы узнаете о: </h1>
+            <section class="main-features">
+                <p><svg width="160" height="160" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.4303 15H4.40034C2.58034 15 1.42034 13.05 2.30034 11.45L4.63034 7.20994L6.81034 3.23994C7.72034 1.58994 10.1003 1.58994 11.0103 3.23994L13.2003 7.20994L14.2503 9.11995L15.5303 11.45C16.4103 13.05 15.2503 15 13.4303 15Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path opacity="0.4" d="M22 15.5C22 19.09 19.09 22 15.5 22C11.91 22 9 19.09 9 15.5C9 15.33 9.01 15.17 9.02 15H13.43C15.25 15 16.41 13.05 15.53 11.45L14.25 9.12C14.65 9.04 15.07 9 15.5 9C19.09 9 22 11.91 22 15.5Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-angle-acute" width="160" height="160" viewBox="0 0 24 24"><path d="M20,19H4.09L14.18,4.43L15.82,5.57L11.28,12.13C12.89,12.96 14,14.62 14,16.54C14,16.7 14,16.85 13.97,17H20V19M7.91,17H11.96C12,16.85 12,16.7 12,16.54C12,15.28 11.24,14.22 10.14,13.78L7.91,17Z" />
+                </svg></p>
+                <p><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="160" height="160" viewBox="0 0 4.2333331 4.2333331" version="1.1" id="svg839"><defs id="defs833"/><g id="layer1" transform="translate(73.404884,-1.9651226)"><g id="g1564"><g id="g4067" transform="translate(8.2194025e-4)"><g id="g7841"><g id="g7841-3" transform="translate(-1.8848453e-6,5.169554e-4)"><g id="g8091"><g id="g8578"><g id="g10360" transform="translate(0,8.8925e-4)"><g id="g10447" transform="translate(0.27285155)"><g id="g22519"><g id="g22540"><g id="g22938"><g id="g23361"><g id="g9487" transform="matrix(0.49999977,0.49999977,-0.49999977,0.49999977,-33.876753,37.684249)" style="stroke-width:0.374178;stroke-miterlimit:4;stroke-dasharray:none"><g id="g23535"><g id="g23432" transform="rotate(45,-71.287571,4.08127)"><g id="g24518"><g id="g6327"><g id="g6491"><g id="g7751"><circle style="fill:none;stroke:#000000;stroke-width:0.374178;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" id="path11581" cx="-4.0823064" cy="-72.596931" r="1.1225282" transform="rotate(-90)"/><path id="rect11585" style="fill:none;stroke:#000000;stroke-width:0.374178;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" d="M -71.10257,2.5826038 V 2.2124674 c 0,-0.3109415 0.250325,-0.5612662 0.561267,-0.5612662 l 1.122545,0 c 0.310942,0 0.561266,0.2503247 0.561266,0.5612662 v 0.3701364 c 0,0.3109415 -0.250324,0.5612663 -0.561266,0.5612663 h -1.122545 c -0.310942,0 -0.561267,-0.2503248 -0.561267,-0.5612663 z"/><path id="path11588" style="fill:none;stroke:#000000;stroke-width:0.374178;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" d="m -71.101643,5.1256096 c 0,0.1304181 0.06576,0.2792683 0.207539,0.3631929 l 1.498591,0.9770495 c 0.211259,0.1219708 0.539063,0.00404 0.539063,-0.2978316 V 5.1256096 4.0831988 c 0,-0.3018701 -0.327804,-0.4198027 -0.539063,-0.297832 l -1.498591,0.9770497 c -0.141781,0.083924 -0.207539,0.2327751 -0.207539,0.3631931 z"/></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g>
+                </svg></p>
+                <p class="features-types"> Видах неевклидовых геометрий </p>
+                <p class="features-concepts"> Неевклидовых принципах </p>
+                <p class="features-figures"> Фигурах неевклидовой геометрии </p>
+            </section>
+            <section class="main-conclusion">
+                <p><i>Если вы интересуетесь математикой и готовы погрузиться в 
+                захватывающий мир неевклидовой геометрии, добро пожаловать на наш сайт, где вы найдете материалы и 
+                статьи по этой увлекательной теме. Узнайте больше о разнообразии геометрических пространств и 
+                расширьте свои математические знания с нами!</i></p>
+            </section>
         </div>
-    </header>
-    <nav class="nav-line">
-        <div style="width: max-content">
-            <button type="submit" class="msgBtn" onClick="return false;" > Основы </button>
-            <button type="submit" class="msgBtn2" onClick="return false;"> Галерея </button>
-            <button type="submit" class="msgBtn3" onClick="return false;" > Неевклидов калькулятор </button>
-            <button type="submit" class="msgBtn4" onClick="return false;" > Литература </button>
-            <button type="submit" class="msgBtn5" onClick="return false;" > Форум </button>
+        <div id="content6" class="content">
+            <h1 class="body-h1"> Что такое неевклидова геометрия? </h1>
+            <section class="main-intro">    
+                <p><b>Неевклидова геометрия</b> – это удивительная область математики, которая изучает геометрические пространства, 
+                отличные от привычной нам евклидовой геометрии. В отличие от евклидовой геометрии, неевклидова геометрия 
+                не придерживается аксиом Евклида и может иметь другую структуру пространства. 
+                Одним из самых известных примеров неевклидовой геометрии является геометрия Лобачевского, 
+                где выполняется гипотеза о параллельных прямых с различной кривизной. В этой геометрии существуют прямые, 
+                которые не пересекаются, а также углы, сумма которых может быть меньше или больше 180 градусов. 
+                Неевклидова геометрия находит свое применение не только в математике, но и в физике, космологии, 
+                компьютерной графике и других областях науки. Она помогает нам лучше понять разнообразие структур 
+                пространства и времени в нашей Вселенной.</p>
+            </section>
+            <h1 class="body-h1"> Вы узнаете о: </h1>
+            <section class="main-features">
+                <p><svg width="160" height="160" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.4303 15H4.40034C2.58034 15 1.42034 13.05 2.30034 11.45L4.63034 7.20994L6.81034 3.23994C7.72034 1.58994 10.1003 1.58994 11.0103 3.23994L13.2003 7.20994L14.2503 9.11995L15.5303 11.45C16.4103 13.05 15.2503 15 13.4303 15Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path opacity="0.4" d="M22 15.5C22 19.09 19.09 22 15.5 22C11.91 22 9 19.09 9 15.5C9 15.33 9.01 15.17 9.02 15H13.43C15.25 15 16.41 13.05 15.53 11.45L14.25 9.12C14.65 9.04 15.07 9 15.5 9C19.09 9 22 11.91 22 15.5Z" stroke="#292D32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg></p>
+                <p><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="mdi-angle-acute" width="160" height="160" viewBox="0 0 24 24"><path d="M20,19H4.09L14.18,4.43L15.82,5.57L11.28,12.13C12.89,12.96 14,14.62 14,16.54C14,16.7 14,16.85 13.97,17H20V19M7.91,17H11.96C12,16.85 12,16.7 12,16.54C12,15.28 11.24,14.22 10.14,13.78L7.91,17Z" />
+                </svg></p>
+                <p><svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="160" height="160" viewBox="0 0 4.2333331 4.2333331" version="1.1" id="svg839"><defs id="defs833"/><g id="layer1" transform="translate(73.404884,-1.9651226)"><g id="g1564"><g id="g4067" transform="translate(8.2194025e-4)"><g id="g7841"><g id="g7841-3" transform="translate(-1.8848453e-6,5.169554e-4)"><g id="g8091"><g id="g8578"><g id="g10360" transform="translate(0,8.8925e-4)"><g id="g10447" transform="translate(0.27285155)"><g id="g22519"><g id="g22540"><g id="g22938"><g id="g23361"><g id="g9487" transform="matrix(0.49999977,0.49999977,-0.49999977,0.49999977,-33.876753,37.684249)" style="stroke-width:0.374178;stroke-miterlimit:4;stroke-dasharray:none"><g id="g23535"><g id="g23432" transform="rotate(45,-71.287571,4.08127)"><g id="g24518"><g id="g6327"><g id="g6491"><g id="g7751"><circle style="fill:none;stroke:#000000;stroke-width:0.374178;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" id="path11581" cx="-4.0823064" cy="-72.596931" r="1.1225282" transform="rotate(-90)"/><path id="rect11585" style="fill:none;stroke:#000000;stroke-width:0.374178;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" d="M -71.10257,2.5826038 V 2.2124674 c 0,-0.3109415 0.250325,-0.5612662 0.561267,-0.5612662 l 1.122545,0 c 0.310942,0 0.561266,0.2503247 0.561266,0.5612662 v 0.3701364 c 0,0.3109415 -0.250324,0.5612663 -0.561266,0.5612663 h -1.122545 c -0.310942,0 -0.561267,-0.2503248 -0.561267,-0.5612663 z"/><path id="path11588" style="fill:none;stroke:#000000;stroke-width:0.374178;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke" d="m -71.101643,5.1256096 c 0,0.1304181 0.06576,0.2792683 0.207539,0.3631929 l 1.498591,0.9770495 c 0.211259,0.1219708 0.539063,0.00404 0.539063,-0.2978316 V 5.1256096 4.0831988 c 0,-0.3018701 -0.327804,-0.4198027 -0.539063,-0.297832 l -1.498591,0.9770497 c -0.141781,0.083924 -0.207539,0.2327751 -0.207539,0.3631931 z"/></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g></g>
+                </svg></p>
+                <p class="features-types"> Видах неевклидовых геометрий </p>
+                <p class="features-concepts"> Неевклидовых принципах </p>
+                <p class="features-figures"> Фигурах неевклидовой геометрии </p>
+            </section>
+            <section class="main-conclusion">
+                <p><i>Если вы интересуетесь математикой и готовы погрузиться в 
+                захватывающий мир неевклидовой геометрии, добро пожаловать на наш сайт, где вы найдете материалы и 
+                статьи по этой увлекательной теме. Узнайте больше о разнообразии геометрических пространств и 
+                расширьте свои математические знания с нами!</i></p>
+            </section>
         </div>
-    </nav>
-    <main>
-      <h1>Заголовок</h1>
-      <p>Текст</p>
-    </main>
+        <div id="content1" class="content">
+            <h1 class="body-h1"> Теория </h1>
+            <nav>
+                <ul>
+                    <li style="list-style-type: '1. '"><h1> Основные понятия неевклидовой геометрии </h1></li>
+                    <li><h2> Отличия от евклидовой геометрии </h2></li>
+                    <li><h2> Применение в современной науке </h2></li>
+                </ul>
+                <ul>
+                    <li style="list-style-type: '2. '"><h1> Геометрия Лобачевского </h1></li>
+                    <li><h2> История создания </h2></li>
+                    <li><h2> Основные постулаты </h2></li>
+                    <li><h2> Структура геометрии </h2></li>
+                </ul>
+                <ul>
+                    <li style="list-style-type: '3. '"><h1> Геометрия Римана </h1></li>
+                    <li><h2> История открытия </h2></li>
+                    <li><h2> Формулировка основных постулатов </h2></li>
+                    <li><h2> Структура геометрии </h2></li>
+                </ul>
+                <ul>
+                    <li style="list-style-type: '4. '"><h1> Геометрия Римана </h1></li>
+                    <li><h2> История открытия </h2></li>
+                    <li><h2> Формулировка основных постулатов </h2></li>
+                    <li><h2> Структура геометрии </h2></li>
+                </ul>
+                <ul>
+                    <li style="list-style-type: '5. '"><h1> Неевклидова геометрия в практике </h1></li>
+                    <li><h2> Как используется в повседневной жизни </h2></li>
+                    <li><h2> Примеры задач, решаемых с использованием неевклидовой геометрии </h2></li>
+                    <li><h2> Перспективы развития этой области </h2></li>
+                </ul>
+                <ul>
+                    <li style="list-style-type: '6. '"><h1> Заключение </h1></li>
+                    <li><h2> Важность изучения неевклидовой геометрии </h2></li>
+                    <li><h2> Приложения в различных областях науки </h2></li>
+                    <li><h2> Перспективы исследований в этой области </h2></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="content2" class="content">
+            <h1> В разработке 2 </h1>
+        </div>
+        <div id="content3" class="content">
+            <h1 class="body-h1"> Неевклидов калькулятор </h1>
+            <section class="download-intro">
+                <p><b>Неевклидов калькулятор</b> - это инновационное приложение, которое позволяет проводить математические 
+                расчеты в неевклидовых пространствах. С его помощью вы сможете решать задачи и проводить операции 
+                с элементами неевклидовой геометрии, такие как гиперболическая и сферическая геометрии. Приложение 
+                предоставляет удобный и интуитивно понятный интерфейс, который позволяет легко вводить данные и 
+                получать точные результаты. Невклидов калькулятор идеально подойдет для студентов, преподавателей и 
+                всех, кто интересуется геометрией и математикой.</p>
+            </section>
+            <section class="download-screenshots" style="margin-bottom: 50px;">
+                <img src="C:\Users\User\Desktop\NC_scrshot_1.png" alt="NC_scrshot_1.png">
+                <img src="C:\Users\User\Desktop\NC_scrshot_2.png" alt="NC_scrshot_2.png">
+            </section>
+            <div class="download-box underline">
+                <a class="download-link" href="C:\Users\User\Desktop\Работает\Неевклидов калькулятор.exe" download> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg> Неевклидов калькулятор.exe </a>
+            </div>
+        </div>
+        <div id="content4" class="content">
+            <h1 class="body-h1"> Библиотека </h1>
+            <div class="letters">
+                <button onclick="openLetter('letter-all')"> <svg xmlns="http://www.w3.org/2000/svg" width="8" height="13" viewBox="0 0 8 16"><path fill-rule="evenodd" d="M0 8c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4-4-1.8-4-4z"/></svg> </button>
+                <button onclick="openLetter('letter-V')"> В </button>
+                <button onclick="openLetter('letter-G')"> Г </button>
+                <button onclick="openLetter('letter-D')"> Д </button>
+                <button onclick="openLetter('letter-M')"> М </button>
+                <button onclick="openLetter('letter-N')"> Н </button>
+                <button onclick="openLetter('letter-O')"> О </button>
+                <button onclick="openLetter('letter-P')"> П </button>
+            </div>
+        <!-- 
+            "В"
+            Введение в геометрию - Г. Кокстер
+            Введение в неевклидову геометрию Римана - С.А. Богомолов
+            Введение в неевклидовы геометрии - И.П. Егоров
+            Введение в элементарную геометрию и тригонометрию Лобачевского - Н.Н. Иовлев
+            Вещественная алгебраическая геометрия - В.И. Арнольд
+            Вычислительная геометрия: введение - Ф. Препарата
+            Вычислительная геометрия. Применение в проектировании и на производстве - А. Фокс
+            
+            "Г"
+            Геометрические исследования по теории параллельных линий - Н. И. Лобачевский
+            Геометрия классических групп - Ж. Дьедонне
+            Геометрия комплексных чисел, кватернионов и спинов - В.И. Арнольд
+            Геометрия Лобачевского - Л.С. Атанасян
+            Геометрия Лобачевского и элементы оснований геометрии - Б.В. Кутузов
+            Геометрия пространств постоянной кривизны - Д.В. Алексеевский, Э.Б. Винберг, А.С. Солодовников
+            
+            "Д"
+            Дискретные группы движений пространств постоянной кривизны - Э.Б. Винберг, О.В. Шварцман
+            
+            "М"
+            Математика XIX века (том 2): геометрия, теория аналитических функций - А.Н. Колмогоров
+            Многомерная комплексная геометрия - Х. Клеменс
+            
+            "Н"
+            Неевклидова геометрия - Ф. Клейн
+            Неевклидова геометрия в теории конформных и псевдоконформных отображений - Б.А. Фукс
+            Неевклидовы геометрии - Б.А. Розенфельд
+            
+            "О"
+            О геометрии Лобачевского - А.С. Смогоржевский
+            От проективной геометрии - к евклидовой (вокруг абсолюта) - Р.Н. Щербаков
+            
+            "П"
+            Принцип относительности Галилея и неевклидова геометрия - И.М. Яглом
+        -->
+        <section id="letter-all" class="letter active">
+            <li><a href="https://djvu.online/download/WlfNhQRnoJnTe"> Введение в геометрию - Г. Кокстер </a></li>
+            <li><a href="https://djvu.online/download/vIM3ckmqrSipu"> Введение в неевклидову геометрию Римана - С.А. Богомолов </a></li>
+            <li><a href="https://clib.me/b/619023-ivan-petrovich-egorov-vvedenie-v-neevklidovyi-geometrii/download"> Введение в неевклидовы геометрии - И.П. Егоров </a></li>
+            <li><a href="https://djvu.online/download/DlcTnQ6NH9mhU"> Введение в элементарную геометрию и тригонометрию Лобачевского - Н.Н. Иовлев </a></li>
+            <li><a href="https://old.mccme.ru/dubna/books/pdf/via-vag.pdf"> Вещественная алгебраическая геометрия - В.И. Арнольд </a></li>
+            <li><a href="https://djvu.online/download1/a41GFp3aWwhrp"> Вычислительная геометрия: введение - Ф. Препарата </a></li>
+            <li><a href="https://djvu.online/download1/TuH2JUjS7nLNW"> Вычислительная геометрия. Применение в проектировании и на производстве - А. Фокс </a></li>
+            <li><a href="https://djvu.online/download/8ik7mjhCr2QrZ"> Геометрические исследования по теории параллельных линий - Н. И. Лобачевский </a></li>
+            <li><a href="https://libcats.org/dl/439817/afbbad"> Геометрия классических групп - Ж. Дьедонне </a></li>
+            <li><a href="http://www.vixri.ru/d2/Arnold%20V.I.%20_%20Geometrija%20kompleksnyx%20chisel,%20kvaternionov%20i%20spinov.pdf"> Геометрия комплексных чисел, кватернионов и спинов - В.И. Арнольд </a></li>
+            <li><a href="https://glavkniga.su/filecont/49645.pdf"> Геометрия Лобачевского - Л.С. Атанасян </a></li>
+            <li><a href="https://libcats.org/dl/577712/0bd91f"> Геометрия Лобачевского и элементы оснований геометрии - Б.В. Кутузов </a></li>
+            <li><a href="https://www.mathnet.ru/php/getFT.phtml?jrnid=intf&paperid=109&what=fullt&option_lang=rus"> Геометрия пространств постоянной кривизны - Д.В. Алексеевский, Э.Б. Винберг, А.С. Солодовников </a></li>
+            <li><a href="https://www.mathnet.ru/php/getFT.phtml?jrnid=intf&paperid=110&what=fullt&option_lang=rus"> Дискретные группы движений пространств постоянной кривизны - Э.Б. Винберг, О.В. Шварцман </a></li>
+            <li><a href="https://djvu.online/download/TrJvfROwWZa0H"> Математика XIX века (том 2): геометрия, теория аналитических функций - А.Н. Колмогоров </a></li>
+            <li><a href="https://libcats.org/dl/440532/006219"> Многомерная комплексная геометрия - Х. Клеменс </a></li>
+            <li><a href="https://djvu.online/download/BggXxB1sHjY18"> Неевклидова геометрия - Ф. Клейн </a></li>
+            <li><a href="https://libcats.org/dl/470553/ac6831"> Неевклидова геометрия в теории конформных и псевдоконформных отображений - Б.А. Фукс </a></li>
+            <li><a href="https://libcats.org/dl/562237/faded6"> Неевклидовы геометрии - Б.А. Розенфельд </a></li>
+            <li><a href="https://djvu.online/download/BKVnonpmO1JMJ"> О геометрии Лобачевского - А.С. Смогоржевский </a></li>
+            <li><a href="https://djvu.online/download/SGs1nMJKuOwhc"> От проективной геометрии - к евклидовой - Р.Н. Щербаков </a></li>
+            <li><a href="https://djvu.online/download/3Erp1cmySKJmp"> Принцип относительности Галилея и неевклидова геометрия - И.М. Яглом </a></li>
+        </section>
+        <section id="letter-V" class="letter">
+            <li><a href="https://djvu.online/download/WlfNhQRnoJnTe"> Введение в геометрию - Г. Кокстер </a></li>
+            <li><a href="https://djvu.online/download/vIM3ckmqrSipu"> Введение в неевклидову геометрию Римана - С.А. Богомолов </a></li>
+            <li><a href="https://clib.me/b/619023-ivan-petrovich-egorov-vvedenie-v-neevklidovyi-geometrii/download"> Введение в неевклидовы геометрии - И.П. Егоров </a></li>
+            <li><a href="https://djvu.online/download/DlcTnQ6NH9mhU"> Введение в элементарную геометрию и тригонометрию Лобачевского - Н.Н. Иовлев </a></li>
+            <li><a href="https://old.mccme.ru/dubna/books/pdf/via-vag.pdf"> Вещественная алгебраическая геометрия - В.И. Арнольд </a></li>
+            <li><a href="https://djvu.online/download1/a41GFp3aWwhrp"> Вычислительная геометрия: введение - Ф. Препарата </a></li>
+            <li><a href="https://djvu.online/download1/TuH2JUjS7nLNW"> Вычислительная геометрия. Применение в проектировании и на производстве - А. Фокс </a></li>
+        </section>
+        <section id="letter-G" class="letter">
+            <li><a href="https://djvu.online/download/8ik7mjhCr2QrZ"> Геометрические исследования по теории параллельных линий - Н. И. Лобачевский </a></li>
+            <li><a href="https://libcats.org/dl/439817/afbbad"> Геометрия классических групп - Ж. Дьедонне </a></li>
+            <li><a href="http://www.vixri.ru/d2/Arnold%20V.I.%20_%20Geometrija%20kompleksnyx%20chisel,%20kvaternionov%20i%20spinov.pdf"> Геометрия комплексных чисел, кватернионов и спинов - В.И. Арнольд </a></li>
+            <li><a href="https://glavkniga.su/filecont/49645.pdf"> Геометрия Лобачевского - Л.С. Атанасян </a></li>
+            <li><a href="https://libcats.org/dl/577712/0bd91f"> Геометрия Лобачевского и элементы оснований геометрии - Б.В. Кутузов </a></li>
+            <li><a href="https://www.mathnet.ru/php/getFT.phtml?jrnid=intf&paperid=109&what=fullt&option_lang=rus"> Геометрия пространств постоянной кривизны - Д.В. Алексеевский, Э.Б. Винберг, А.С. Солодовников </a></li>
+        </section>
+        <section id="letter-D" class="letter">
+            <li><a href="https://www.mathnet.ru/php/getFT.phtml?jrnid=intf&paperid=110&what=fullt&option_lang=rus"> Дискретные группы движений пространств постоянной кривизны - Э.Б. Винберг, О.В. Шварцман </a></li>
+        </section>
+        <section id="letter-M" class="letter">
+            <li><a href="https://djvu.online/download/TrJvfROwWZa0H"> Математика XIX века (том 2): геометрия, теория аналитических функций - А.Н. Колмогоров </a></li>
+            <li><a href="https://libcats.org/dl/440532/006219"> Многомерная комплексная геометрия - Х. Клеменс </a></li>
+        </section>
+        <section id="letter-N" class="letter">
+            <li><a href="https://djvu.online/download/BggXxB1sHjY18"> Неевклидова геометрия - Ф. Клейн </a></li>
+            <li><a href="https://libcats.org/dl/470553/ac6831"> Неевклидова геометрия в теории конформных и псевдоконформных отображений - Б.А. Фукс </a></li>
+            <li><a href="https://libcats.org/dl/562237/faded6"> Неевклидовы геометрии - Б.А. Розенфельд </a></li>
+        </section>
+        <section id="letter-O" class="letter">
+            <li><a href="https://djvu.online/download/BKVnonpmO1JMJ"> О геометрии Лобачевского - А.С. Смогоржевский </a></li>
+            <li><a href="https://djvu.online/download/SGs1nMJKuOwhc"> От проективной геометрии - к евклидовой - Р.Н. Щербаков </a></li>
+        </section>
+        <section id="letter-P" class="letter">
+            <li><a href="https://djvu.online/download/3Erp1cmySKJmp"> Принцип относительности Галилея и неевклидова геометрия - И.М. Яглом </a></li>
+        </section>
+        </div>
+        <div id="content5" class="content">
+            <h1 class="body-h1"> Форум </h1>
+            <p class="forum-text"> В данный момент форум находится <b>в разработке</b>. Следите за обновлениями! </p>
+        </div>
+        <footer>
+            <div class="footer-links">
+                <h1><u> Навигатор </u></h1>
+                <p class="footer-theory-link"><li class="underline" onclick="showContent(1)"> Теория  </li></p>
+                <p class="footer-gallery-link"><li class="underline" onclick="showContent(2)"> Галерея </li></p>
+                <p class="footer-calc-link"><li class="underline" onclick="showContent(3)"> Неевклидов калькулятор </li></p>
+                <p class="footer-lit-link"><li class="underline" onclick="showContent(4)"> Библиотека </li></p>
+                <p class="footer-forum-link"><li class="underline" onclick="showContent(5)"> Форум </li></p>
+            </div>
+            <div class="footer-contacts">
+                <h1><u> Контакты </u></h1>
+                <p class="contacts-phone"><a href="tel: +79621200150" class="underline"> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="18" height="18" viewBox="0 0 477.156 477.156" style="enable-background:new 0 0 477.156 477.156;"
+                    xml:space="preserve">
+                   <path d="M475.009,380.316l-2.375-7.156c-5.625-16.719-24.062-34.156-41-38.75l-62.688-17.125c-17-4.625-41.25,1.594-53.688,14.031
+                       l-22.688,22.688c-82.453-22.28-147.109-86.938-169.359-169.375L145.9,161.94c12.438-12.438,18.656-36.656,14.031-53.656
+                       l-17.094-62.719c-4.625-16.969-22.094-35.406-38.781-40.969L96.9,2.19c-16.719-5.563-40.563,0.063-53,12.5L9.962,48.659
+                       C3.899,54.69,0.024,71.94,0.024,72.003c-1.187,107.75,41.063,211.562,117.281,287.781
+                       c76.031,76.031,179.454,118.219,286.891,117.313c0.562,0,18.312-3.813,24.375-9.845l33.938-33.938
+                       C474.946,420.878,480.571,397.035,475.009,380.316z"/>
+               </svg> +7 (962) 120-01-50 </a></p>
+               <p class="contacts-email"><a href="mailto: nikitakoba2007@gmail.com" class="underline"> <svg data-name="Livello 1" id="Livello_1" width="18" height="18" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg"><title/><path d="M116.73,31.83a3,3,0,0,0-4.2-.61L64.14,67.34a1,1,0,0,1-1.2,0L15.5,31.06a3,3,0,1,0-3.64,4.77L49.16,64.36,12.27,92.16A3,3,0,1,0,15.88,97L54.11,68.14l5.18,4a7,7,0,0,0,8.43.06l5.44-4.06L111.84,97a3,3,0,1,0,3.59-4.81L78.17,64.35,116.12,36A3,3,0,0,0,116.73,31.83Z"/><path d="M113,19H15A15,15,0,0,0,0,34V94a15,15,0,0,0,15,15h98a15,15,0,0,0,15-15V34A15,15,0,0,0,113,19Zm9,75a9,9,0,0,1-9,9H15a9,9,0,0,1-9-9V34a9,9,0,0,1,9-9h98a9,9,0,0,1,9,9Z"/></svg> nikitakoba2007@gmail.com</a></p>
+               <p class="contacts-github"><a href="https://github.com/nikita64347/Neevklidov-calculator" class="underline"> <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="18" height="18" viewBox="0 0 438.549 438.549" style="enable-background:new 0 0 438.549 438.549;"
+                    xml:space="preserve">
+                    <path d="M409.132,114.573c-19.608-33.596-46.205-60.194-79.798-79.8C295.736,15.166,259.057,5.365,219.271,5.365
+                        c-39.781,0-76.472,9.804-110.063,29.408c-33.596,19.605-60.192,46.204-79.8,79.8C9.803,148.168,0,184.854,0,224.63
+                        c0,47.78,13.94,90.745,41.827,128.906c27.884,38.164,63.906,64.572,108.063,79.227c5.14,0.954,8.945,0.283,11.419-1.996
+                        c2.475-2.282,3.711-5.14,3.711-8.562c0-0.571-0.049-5.708-0.144-15.417c-0.098-9.709-0.144-18.179-0.144-25.406l-6.567,1.136
+                        c-4.187,0.767-9.469,1.092-15.846,1c-6.374-0.089-12.991-0.757-19.842-1.999c-6.854-1.231-13.229-4.086-19.13-8.559
+                        c-5.898-4.473-10.085-10.328-12.56-17.556l-2.855-6.57c-1.903-4.374-4.899-9.233-8.992-14.559
+                        c-4.093-5.331-8.232-8.945-12.419-10.848l-1.999-1.431c-1.332-0.951-2.568-2.098-3.711-3.429c-1.142-1.331-1.997-2.663-2.568-3.997
+                        c-0.572-1.335-0.098-2.43,1.427-3.289c1.525-0.859,4.281-1.276,8.28-1.276l5.708,0.853c3.807,0.763,8.516,3.042,14.133,6.851
+                        c5.614,3.806,10.229,8.754,13.846,14.842c4.38,7.806,9.657,13.754,15.846,17.847c6.184,4.093,12.419,6.136,18.699,6.136
+                        c6.28,0,11.704-0.476,16.274-1.423c4.565-0.952,8.848-2.383,12.847-4.285c1.713-12.758,6.377-22.559,13.988-29.41
+                        c-10.848-1.14-20.601-2.857-29.264-5.14c-8.658-2.286-17.605-5.996-26.835-11.14c-9.235-5.137-16.896-11.516-22.985-19.126
+                        c-6.09-7.614-11.088-17.61-14.987-29.979c-3.901-12.374-5.852-26.648-5.852-42.826c0-23.035,7.52-42.637,22.557-58.817
+                        c-7.044-17.318-6.379-36.732,1.997-58.24c5.52-1.715,13.706-0.428,24.554,3.853c10.85,4.283,18.794,7.952,23.84,10.994
+                        c5.046,3.041,9.089,5.618,12.135,7.708c17.705-4.947,35.976-7.421,54.818-7.421s37.117,2.474,54.823,7.421l10.849-6.849
+                        c7.419-4.57,16.18-8.758,26.262-12.565c10.088-3.805,17.802-4.853,23.134-3.138c8.562,21.509,9.325,40.922,2.279,58.24
+                        c15.036,16.18,22.559,35.787,22.559,58.817c0,16.178-1.958,30.497-5.853,42.966c-3.9,12.471-8.941,22.457-15.125,29.979
+                        c-6.191,7.521-13.901,13.85-23.131,18.986c-9.232,5.14-18.182,8.85-26.84,11.136c-8.662,2.286-18.415,4.004-29.263,5.146
+                        c9.894,8.562,14.842,22.077,14.842,40.539v60.237c0,3.422,1.19,6.279,3.572,8.562c2.379,2.279,6.136,2.95,11.276,1.995
+                        c44.163-14.653,80.185-41.062,108.068-79.226c27.88-38.161,41.825-81.126,41.825-128.906
+                        C438.536,184.851,428.728,148.168,409.132,114.573z"/></svg> GitHub </a></p>
+            </div>
+        </footer>
+    </body>
 </html>
