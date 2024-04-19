@@ -6,7 +6,7 @@
 }
   
 .site-header {
-    min-width: 550px;
+    width: 1886px;
     height: 150px;
     margin-bottom: 1px;
     padding-top: 30px;
@@ -20,8 +20,16 @@
     margin: 0 auto;
 }
 
+.underline:hover {
+    text-decoration: underline;
+}
+
+/* .bold:hover {
+    font-weight: 700;
+} */
+
 .nav-line div button {
-    width: 373px;
+    width: 374px;
     height: 75px;
     background-color: #c1c5ff;
     font-size: 20px;
@@ -32,7 +40,7 @@ nav {
     margin-bottom: 50px;
 }
 
-body .body-h1 {
+.body-h1 {
     text-align: center;
     font-family: 'Comic Sans MS', 'Comic Sans', cursive;
 }
@@ -97,6 +105,7 @@ footer h1 {
     font-size: 15px;
     font-family: 'Andale Mono', sans-serif;
     font-weight: 700;
+    width: 250px;
 }
 
 .footer-contacts {
@@ -107,13 +116,118 @@ footer h1 {
 
 .contacts-phone {
     margin-right: 55px;
+    margin-top: 35px;
+}
+
+.contacts-email {
+    margin-top: 30px;
 }
 
 .contacts-github {
     margin-right: 134px;
+    margin-top: 30px;
 }
 
 .contacts-phone, .contacts-email, .contacts-github,  a:link, a:visited {
     color: #000;
     text-decoration: none;
+}
+
+.teory-lst-section-title {
+    list-style-type: decimal;
+}
+
+.forum-text {
+    text-align: center;
+    padding-left: 600px;
+    padding-right: 600px;
+    margin-top: 250px;
+    margin-bottom: 250px;
+    font-size: 25px;
+    font-family: 'Andale Mono', sans-serif;
+    line-height: 1.5;
+}
+
+.download-intro p {
+    text-align: justify;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border:3px #ECF4FC solid;
+    background-color: #ECF4FC;
+    border-radius: 1em; 
+    font-size: 25px;
+    font-family: 'Andale Mono', sans-serif;
+    line-height: 1.5;
+}
+
+.download-screenshots img {
+    margin-left: 200px;
+    margin-right: 125px;
+}
+
+.download-box {
+    background-color: #ECF4FC;
+    padding: 10px;
+    border: 1px solid #ECF4FC;
+    border-radius: 5px;
+    /* text-align: center; */
+    width: 400px;
+    height: 50px;
+    margin-right: 20px;
+    margin-left: 50px;
+    margin-bottom: 50px;
+}
+
+.download-link {
+    padding-left: 25px;
+    margin-bottom: 50px;
+}
+
+.content {
+    display: none;
+}
+.content.active {
+    display: block;
+}
+
+.letter {
+    display: none;
+}
+
+.letter.active {
+    display: block;
+}
+
+.letters {
+    margin-top: 50px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+}
+
+.letters button {
+    width: 40px;
+    height: 40px;
+    background-color: #e1e2fc;
+    border-color: #e1e2fc;
+    border-radius: 0.5em;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.letter {
+    margin-left: 50px;
+    height: 1300px;
+}
+
+.letter li {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', sans-serif;
+    line-height: 2.3;
+    list-style-type: square;
+}
+
+.letter li:hover {
+    font-weight: 700;
 }
